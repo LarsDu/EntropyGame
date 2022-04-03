@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571e882e4b1068d4f8ed38a09478eb1e, type: 3}
+  m_Name: BlueBallSO
+  m_EditorClassIdentifier: 
+  type: {fileID: 11400000, guid: 954eb7435754a5546a2d8ef8abcd4d91, type: 2}
+  cancelOutPrefab: {fileID: 5515357035611359631, guid: d3aca22145638d24aa8ab80f1819cf65, type: 3}
+  cancelOutScore: 50
+  cancelOutSound: {fileID: 8300000, guid: 592c9d3d0df7ae24db3bf3a4cdb6ff1f, type: 3}
+  ballToBallSound: {fileID: 8300000, guid: 990c0cf54124d06438eaced36db18e14, type: 3}
+  boundaryDeathPrefab: {fileID: 7113691774582153880, guid: ba80eaee4c88c134ba39f8bd792ce6ed, type: 3}
+  boundaryDeathSound: {fileID: 8300000, guid: 4cda614b3256c3843bde9e623501bda6, type: 3}
+  cameraShakeDuration: 0.1
+  cameraShakeMagnitude: 0.1
