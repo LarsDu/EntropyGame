@@ -142,6 +142,7 @@ namespace DoGames.Entropy.Managers
             if(activeCount + receivedCount < goalThreshold){
                 gameManager?.GameOverUnwinnable(type.name);
             }
+            gameManager?.CheckIfZeroBalls();
 
         }
 

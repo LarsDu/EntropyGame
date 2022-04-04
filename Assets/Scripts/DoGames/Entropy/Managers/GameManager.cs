@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DoGames.Events;
+using DoGames.Entropy.Entities;
+
 namespace DoGames.Entropy.Managers
 {   
        public class GameManager : MonoBehaviour
@@ -49,7 +51,7 @@ namespace DoGames.Entropy.Managers
         protected void Initializer(){
 
             Time.timeScale = 1;
-            Physics.gravity = new Vector3(0, 0, -10);
+            Physics.gravity = new Vector3(0, -10, 0);
             Physics2D.gravity = new Vector2(0, -10);
         }
 
@@ -97,6 +99,19 @@ namespace DoGames.Entropy.Managers
            if (isVictory){
                LevelComplete();
            }
+        }
+
+
+        /// <summary>
+        /// TODO: This is a bugfix and is not very optimal
+        /// There is still a lingering failure condition wherein
+        /// zero balls can be present
+        /// </summary>
+        public void CheckIfZeroBalls(){
+            Ball [] allBalls = GameObject.FindObjectsOfType<Ball>(includeInactive: false);
+            if(allBalls == null || allBalls.Length <= 0){
+                GameOverUnwinnable("ball");
+            }
         }
 
         protected IEnumerator PauseInSecs(float secs){
